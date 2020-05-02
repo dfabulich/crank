@@ -1,19 +1,20 @@
 import resolve from "@rollup/plugin-node-resolve";
 import typescript from "rollup-plugin-typescript2";
-export default {
-	input: ["src/index.ts", "src/dom.ts", "src/html.ts"],
+import {basename} from "path";
+export default ["src/index.ts", "src/dom.ts", "src/html.ts"].map((input) => ({
+	input,
 	output: [
 		{
 			format: "cjs",
-			dir: "cjs",
+			file: `cjs/${basename(input).replace(/\.ts$/, ".js")}`,
 			sourcemap: true,
 		},
 		{
 			format: "esm",
-			dir: "esm",
+			file: `esm/${basename(input).replace(/\.ts$/, ".mjs")}`,
 			sourcemap: true,
 		},
 	],
 	external: ["@repeaterjs/repeater"],
 	plugins: [typescript(), resolve()],
-};
+}));
