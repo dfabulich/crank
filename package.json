@@ -5,15 +5,15 @@
   "description": "JSX-based components with functions, promises and generators.",
   "exports": {
     ".": {
-      "import": "./esm/index.mjs",
+      "import": "./esm/index.js",
       "require": "./cjs/index.js"
     },
     "./html": {
-      "import": "./esm/html.mjs",
+      "import": "./esm/html.js",
       "require": "./cjs/html.js"
     },
     "./dom": {
-      "import": "./esm/dom.mjs",
+      "import": "./esm/dom.js",
       "require": "./cjs/dom.js"
     },
     "./cjs": {

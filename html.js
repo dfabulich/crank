@@ -1,1 +1,1 @@
-export * from "./esm/html.mjs";
+export * from "./esm/html.js";

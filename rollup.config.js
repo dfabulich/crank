@@ -11,7 +11,7 @@ export default ["src/index.ts", "src/dom.ts", "src/html.ts"].map((input) => ({
 		},
 		{
 			format: "esm",
-			file: `esm/${basename(input).replace(/\.ts$/, ".mjs")}`,
+			file: `esm/${basename(input).replace(/\.ts$/, ".js")}`,
 			sourcemap: true,
 		},
 	],
