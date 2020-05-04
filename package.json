@@ -5,34 +5,43 @@
   "description": "JSX-based components with functions, promises and generators.",
   "exports": {
     ".": {
-      "import": "./esm/index.mjs",
-      "require": "./cjs/index.js"
+      "import": "./esm/index.js",
+      "require": "./cjs/index.cjs"
     },
     "./html": {
-      "import": "./esm/html.mjs",
-      "require": "./cjs/html.js"
+      "import": "./esm/html.js",
+      "require": "./cjs/html.cjs"
     },
     "./dom": {
-      "import": "./esm/dom.mjs",
-      "require": "./cjs/dom.js"
+      "import": "./esm/dom.js",
+      "require": "./cjs/dom.cjs"
     },
     "./cjs": {
-      "require": "./cjs/index.js"
+      "require": "./cjs/index.cjs"
     },
     "./cjs/index.js": {
-      "require": "./cjs/index.js"
+      "require": "./cjs/index.cjs"
+    },
+    "./cjs/index.cjs": {
+      "require": "./cjs/index.cjs"
     },
     "./cjs/html": {
-      "require": "./cjs/html.js"
+      "require": "./cjs/html.cjs"
     },
     "./cjs/dom": {
-      "require": "./cjs/dom.js"
+      "require": "./cjs/dom.cjs"
     },
     "./cjs/html.js": {
-      "require": "./cjs/html.js"
+      "require": "./cjs/html.cjs"
+    },
+    "./cjs/html.cjs": {
+      "require": "./cjs/html.cjs"
     },
     "./cjs/dom.js": {
-      "require": "./cjs/dom.js"
+      "require": "./cjs/dom.cjs"
+    },
+    "./cjs/dom.cjs": {
+      "require": "./cjs/dom.cjs"
     }
   },
   "files": [
@@ -43,8 +52,9 @@
     "html.d.ts",
     "html.js"
   ],
-  "main": "cjs/index.js",
-  "module": "esm/index.mjs",
+  "main": "cjs/index.cjs",
+  "module": "esm/index.js",
+  "type": "module",
   "types": "esm/index.d.ts",
   "scripts": {
     "prebuild": "yarn run clean",
@@ -52,7 +62,7 @@
     "clean": "shx rm -rf ./cjs ./esm",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
     "prepublishOnly": "yarn run test && yarn run build",
-    "test": "jest --config jest.config.js --color --no-cache",
+    "test": "jest --config jest.config.cjs --color --no-cache",
     "debug": "node --inspect-brk node_modules/.bin/jest --runInBand"
   },
   "devDependencies": {

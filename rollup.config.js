@@ -6,12 +6,12 @@ export default ["src/index.ts", "src/dom.ts", "src/html.ts"].map((input) => ({
 	output: [
 		{
 			format: "cjs",
-			file: `cjs/${basename(input).replace(/\.ts$/, ".js")}`,
+			file: `cjs/${basename(input).replace(/\.ts$/, ".cjs")}`,
 			sourcemap: true,
 		},
 		{
 			format: "esm",
-			file: `esm/${basename(input).replace(/\.ts$/, ".mjs")}`,
+			file: `esm/${basename(input).replace(/\.ts$/, ".js")}`,
 			sourcemap: true,
 		},
 	],
