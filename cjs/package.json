@@ -1,0 +1,11 @@
+{
+  "name": "cjs",
+  "type": "commonjs",
+  "main": "index.js",
+  "types": "index.d.js",
+  "exports": {
+  	".": "index.js",
+  	"./html": "html.js",
+  	"./dom": "dom.js"
+  }
+}
